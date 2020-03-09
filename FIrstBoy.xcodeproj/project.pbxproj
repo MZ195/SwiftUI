@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED94423F24168D0000383632 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94423E24168D0000383632 /* HomeView.swift */; };
 		EDBAD3C924103D2F0039D81B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD3C824103D2F0039D81B /* MenuView.swift */; };
 		EDE846222406C04E00A5B34D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE846212406C04E00A5B34D /* AppDelegate.swift */; };
 		EDE846242406C04E00A5B34D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE846232406C04E00A5B34D /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED94423E24168D0000383632 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EDBAD3C824103D2F0039D81B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		EDE8461E2406C04E00A5B34D /* FIrstBoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIrstBoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE846212406C04E00A5B34D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				EDE846212406C04E00A5B34D /* AppDelegate.swift */,
 				EDE846232406C04E00A5B34D /* SceneDelegate.swift */,
 				EDE846252406C04E00A5B34D /* ContentView.swift */,
+				ED94423E24168D0000383632 /* HomeView.swift */,
 				EDBAD3C824103D2F0039D81B /* MenuView.swift */,
 				EDE846272406C05100A5B34D /* Assets.xcassets */,
 				EDE8462C2406C05100A5B34D /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				EDE846222406C04E00A5B34D /* AppDelegate.swift in Sources */,
 				EDBAD3C924103D2F0039D81B /* MenuView.swift in Sources */,
 				EDE846242406C04E00A5B34D /* SceneDelegate.swift in Sources */,
+				ED94423F24168D0000383632 /* HomeView.swift in Sources */,
 				EDE846262406C04E00A5B34D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
