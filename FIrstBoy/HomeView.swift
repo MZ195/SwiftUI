@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+let screen = UIScreen.main.bounds
+
 struct HomeView: View {
     @State var showProfile = false
     @State var viewState = CGSize.zero
@@ -17,20 +19,7 @@ struct HomeView: View {
             Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
                 .edgesIgnoringSafeArea(.all) // this modifer extends the property to whole device
             
-            VStack {
-                HStack {
-                    Text("Watching")
-                        .font(.system(size: 28, weight: .bold))
-                    
-                    Spacer()
-                    
-                    AvatarView(showProfile: $showProfile)
-                }
-                .padding(.horizontal)
-                .padding(.top, 30)
-                
-                Spacer()
-            }
+            HomeViewContent(showProfile: $showProfile)
                 .padding(.top, 44) // 44 is the size of the top bar
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -43,7 +32,7 @@ struct HomeView: View {
             
             MenuView()
                 .background(Color.black.opacity(0.001))
-                .offset(y: showProfile ? 0 : 1000)
+                .offset(y: showProfile ? 0 : screen.height)
                 .offset(y: viewState.height)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
                 .onTapGesture {
