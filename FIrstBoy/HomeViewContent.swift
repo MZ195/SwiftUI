@@ -8,12 +8,6 @@
 
 import SwiftUI
 
-let sections = [
-    section(title: "Prototype designs in SwiftUI", text: "18 sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card6")), color: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))),
-    section(title: "Build a SwiftUI app", text: "20 sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))),
-    section(title: "Advanced SwiftUI", text: "20 sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
-]
-
 struct HomeViewContent: View {
     @Binding var showProfile: Bool
     @State var showUpdate = false
@@ -45,6 +39,25 @@ struct HomeViewContent: View {
             .padding(.horizontal)
             .padding(.leading, 14)
             .padding(.top, 30)
+            
+            HStack {
+                HStack(spacing: 14) {
+                    RingView(showProgress: .constant(true), color1: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), color2: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 68)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("6 minutes left")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                        Text("Watched 10 minutes today")
+                            .font(.caption)
+                            .foregroundColor(Color.gray)
+                    }
+                }
+                .padding(8)
+                .background(Color.white)
+                .cornerRadius(20)
+            .modifier(ShadowModifier())
+            }
+//            .frame(maxWidth: .infinity)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -103,3 +116,9 @@ struct SectionView: View {
         .shadow(color: section.color.opacity(0.3), radius: 20, x: 0, y: 20)
     }
 }
+
+let sections = [
+    section(title: "Prototype designs in SwiftUI", text: "18 sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card6")), color: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))),
+    section(title: "Build a SwiftUI app", text: "20 sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))),
+    section(title: "Advanced SwiftUI", text: "20 sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
+]
