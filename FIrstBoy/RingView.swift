@@ -17,6 +17,7 @@ struct RingView: View {
     var width:CGFloat = 88
     var height:CGFloat = 88
     var percent:CGFloat = 80
+    var image:Image? = nil
     
     var body: some View {
         

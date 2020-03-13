@@ -11,6 +11,7 @@ import SwiftUI
 struct HomeViewContent: View {
     @Binding var showProfile: Bool
     @State var showUpdate = false
+    @Binding var showContent: Bool
     
     var body: some View {
         VStack {
@@ -40,24 +41,14 @@ struct HomeViewContent: View {
             .padding(.leading, 14)
             .padding(.top, 30)
             
-            HStack {
-                HStack(spacing: 14) {
-                    RingView(showProgress: .constant(true), color1: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), color2: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 68)
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("6 minutes left")
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                        Text("Watched 10 minutes today")
-                            .font(.caption)
-                            .foregroundColor(Color.gray)
-                    }
+            ScrollView(.horizontal, showsIndicators: false) {
+                WatchRingsView()
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 30)
+                    .onTapGesture {
+                        self.showContent = true
                 }
-                .padding(8)
-                .background(Color.white)
-                .cornerRadius(20)
-            .modifier(ShadowModifier())
             }
-//            .frame(maxWidth: .infinity)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -72,6 +63,7 @@ struct HomeViewContent: View {
                 .padding(30)
                 .padding(.bottom, 30)
             }
+            .offset(y: -30)
             
             Spacer()
         }
@@ -80,7 +72,7 @@ struct HomeViewContent: View {
 
 struct HomeViewContent_Previews: PreviewProvider {
     static var previews: some View {
-        HomeViewContent(showProfile: .constant(false))
+        HomeViewContent(showProfile: .constant(false), showContent: .constant(false))
     }
 }
 
@@ -122,3 +114,41 @@ let sections = [
     section(title: "Build a SwiftUI app", text: "20 sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))),
     section(title: "Advanced SwiftUI", text: "20 sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
 ]
+
+struct WatchRingsView: View {
+    var body: some View {
+        HStack(spacing: 30) {
+            HStack(spacing: 14) {
+                RingView(showProgress: .constant(true), color1: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), color2: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 68)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("6 minutes left")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                    Text("Watched 10 minutes today")
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                }
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            HStack{
+                RingView(showProgress: .constant(true), color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 55)
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            HStack{
+                RingView(showProgress: .constant(true), color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 32)
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+        }
+    }
+}

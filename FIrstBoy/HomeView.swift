@@ -4,7 +4,7 @@
 //
 //  Created by Mazen .A on 09/03/2020.
 //  Copyright © 2020 Mazen .A. All rights reserved.
-//
+//  in this file we have all screens on top of each other
 
 import SwiftUI
 
@@ -13,13 +13,15 @@ let screen = UIScreen.main.bounds
 struct HomeView: View {
     @State var showProfile = false
     @State var viewState = CGSize.zero
+    @State var showContent = false
+    
     var body: some View {
         ZStack {
             
             Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
                 .edgesIgnoringSafeArea(.all) // this modifer extends the property to whole device
             
-            HomeViewContent(showProfile: $showProfile)
+            HomeViewContent(showProfile: $showProfile, showContent: $showContent)
                 .padding(.top, 44) // 44 is the size of the top bar
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -56,6 +58,29 @@ struct HomeView: View {
                 self.viewState = .zero
             })
             
+            if showContent {
+                Color.white.edgesIgnoringSafeArea(.all)
+                
+                ContentView()
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "xmark")
+                            .frame(width: 36, height: 36)
+                            .foregroundColor(.white)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                            .onTapGesture {
+                                self.showContent = false
+                        }
+                    }
+                    Spacer()
+                }
+                .offset(x: -16, y: 16)
+                .transition(.move(edge: .top))
+                .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0))
+            }
         }
     }
 }
