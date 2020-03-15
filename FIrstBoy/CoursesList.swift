@@ -10,8 +10,16 @@ import SwiftUI
 
 struct CoursesList: View {
     var body: some View {
-        VStack {
-            CourseView()
+        ScrollView {
+            VStack(spacing: 30) {
+                CourseView()
+                GeometryReader { coordinates in
+                    CourseView()
+                }
+                .frame(height: 280)
+                .frame(maxWidth: .infinity)
+            }
+            .frame(maxWidth: .infinity)
         }
     }
 }
