@@ -9,9 +9,23 @@
 import SwiftUI
 
 struct CoursesList: View {
+    
+    @State var showCourseContent = false
+    @State var showCourseContent2 = false
+    
     var body: some View {
-        VStack {
-            CourseView()
+        ScrollView {
+            VStack(spacing: 30) {
+                CourseView(showCourseContent: $showCourseContent)
+                
+                GeometryReader { coordinates in
+                    CourseView(showCourseContent: self.$showCourseContent2)
+                        .offset(y: self.showCourseContent2 ? -coordinates.frame(in: .global).minY : 0)
+                }
+                .frame(height: showCourseContent2 ? screen.height : 280)
+                .frame(maxWidth: showCourseContent2 ? .infinity : screen.width - 60)
+            }
+            .frame(maxWidth: .infinity)
         }
     }
 }
@@ -24,7 +38,7 @@ struct CoursesList_Previews: PreviewProvider {
 
 struct CourseView: View {
     
-    @State var showCourseContent = false
+    @Binding var showCourseContent: Bool
     
     var body: some View {
         ZStack(alignment: .top) {
