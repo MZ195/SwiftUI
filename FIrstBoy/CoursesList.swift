@@ -13,11 +13,12 @@ struct CoursesList: View {
     @State var courses = courseData
     @State var active = false
     @State var activeIndex = -1
+    @State var activeView = CGSize.zero
     
     var body: some View {
         ZStack {
             
-            Color.black.opacity(active ? 0.5 : 0)
+            Color.black.opacity(Double(activeView.height/500))
                 .animation(.linear)
                 .edgesIgnoringSafeArea(.all)
             
@@ -36,6 +37,7 @@ struct CoursesList: View {
                                 showCourseContent: self.$courses[index].showContent,
                                 active: self.$active,
                                 activeIndex: self.$activeIndex,
+                                activeView: self.$activeView,
                                 course: self.courses[index], index: index
                             )
                                 .offset(y: self.courses[index].showContent ? -coordinates.frame(in: .global).minY : 0)
@@ -68,6 +70,7 @@ struct CourseView: View {
     @Binding var showCourseContent: Bool
     @Binding var active: Bool
     @Binding var activeIndex: Int
+    @Binding var activeView: CGSize
     
     var course: Course
     var index: Int
@@ -132,18 +135,42 @@ struct CourseView: View {
             .frame(maxWidth: showCourseContent ? .infinity : screen.width - 60, maxHeight: showCourseContent ? (screen.height/2) : 280)
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
-            .onTapGesture {
-                self.showCourseContent.toggle()
-                self.active.toggle()
-                
-                if self.showCourseContent {
-                    self.activeIndex = self.index
-                } else {
-                    self.activeIndex = -1
+            .gesture( showCourseContent ?
+                DragGesture()
+                    .onChanged { value in
+                        guard value.translation.height < 300 else {return}
+                        guard value.translation.height > 0 else {return}
+                        self.activeView = value.translation
                 }
+                .onEnded { value in
+                    if self.activeView.height > 50{
+                        self.showCourseContent = false
+                        self.active = false
+                        self.activeIndex = -1
+                    }
+                    self.activeView = .zero
+                }
+                : nil
+            )
+                .onTapGesture {
+                    self.showCourseContent.toggle()
+                    self.active.toggle()
+                    
+                    if self.showCourseContent {
+                        self.activeIndex = self.index
+                    } else {
+                        self.activeIndex = -1
+                    }
             }
+//            if showCourseContent {
+//                CourseDetails(showCourseContent: $showCourseContent, active: $active, activeIndex: $activeIndex, course: course)
+//                    .background(Color.white)
+//                    .animation(nil)
+//            }
         }
         .frame(height: showCourseContent ? screen.height : 280)
+        .scaleEffect(1 - self.activeView.height / 1000)
+        .rotation3DEffect(Angle(degrees: Double(self.activeView.height/10)), axis: (x: 0, y: 10.0, z: 0))
         .animation(.spring(response: 0.5, dampingFraction: 0.8, blendDuration: 0))
         .edgesIgnoringSafeArea(.all)
         

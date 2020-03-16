@@ -38,7 +38,7 @@ struct ContentView: View {
                 .rotation3DEffect(Angle.degrees(showCard ? 0 : 10), axis: (x: 10.0, y: 0, z: 0))
                 .blendMode(.hardLight)
                 .animation(.easeInOut(duration: 0.5))
-
+            
             BackCardView()
                 .frame(width: 340, height: 220)
                 .background(show ? Color("card4") : Color("card3"))
@@ -54,12 +54,11 @@ struct ContentView: View {
                 .blendMode(.hardLight)
                 .animation(.easeInOut(duration: 0.3))
             
-//            Text("\(bottomState.height)").offset(y: -300)
+            //            Text("\(bottomState.height)").offset(y: -300)
             
             CardView()
                 .frame(width: showCard ? 375 : 340.0, height: 220.0)
                 .background(Color.black)
-//                .cornerRadius(20)
                 .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 : 20, style: .continuous))
                 .shadow(radius: 20)
                 .offset(x: viewState.width, y: viewState.height)
@@ -86,29 +85,29 @@ struct ContentView: View {
                 .offset(y: bottomState.height)
                 .blur(radius: show ? 20 : 0)
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
-            .gesture(
-                DragGesture()
-                    .onChanged { value in
-                        self.bottomState = value.translation
-                        if self.showFull {
-                            self.bottomState.height += -300
+                .gesture(
+                    DragGesture()
+                        .onChanged { value in
+                            self.bottomState = value.translation
+                            if self.showFull {
+                                self.bottomState.height += -300
+                            }
+                            if self.bottomState.height < -300 {
+                                self.bottomState.height = -300
+                            }
+                    }
+                    .onEnded { value in
+                        if self.bottomState.height > 50 {
+                            self.showCard = false
                         }
-                        if self.bottomState.height < -300 {
+                        if (self.bottomState.height < -100 && !self.showFull) || (self.bottomState.height < -250 && self.showFull){
                             self.bottomState.height = -300
+                            self.showFull = true
+                        }else {
+                            self.bottomState = .zero
+                            self.showFull = false
                         }
-                }
-                .onEnded { value in
-                    if self.bottomState.height > 50 {
-                        self.showCard = false
                     }
-                    if (self.bottomState.height < -100 && !self.showFull) || (self.bottomState.height < -250 && self.showFull){
-                        self.bottomState.height = -300
-                        self.showFull = true
-                    }else {
-                        self.bottomState = .zero
-                        self.showFull = false
-                    }
-                }
             )
         }
     }
@@ -172,7 +171,7 @@ struct TitleView: View {
 
 struct BottomCardView: View {
     @Binding var showProgress: Bool
-
+    
     var body: some View {
         VStack(spacing: 20) {
             Rectangle()
@@ -201,7 +200,7 @@ struct BottomCardView: View {
                 .cornerRadius(20)
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
             }
-                
+            
             
             Spacer()
         }

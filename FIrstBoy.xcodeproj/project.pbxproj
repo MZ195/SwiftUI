@@ -13,6 +13,10 @@
 		845A6614241A7D5F0038F7CE /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A6613241A7D5F0038F7CE /* Modifiers.swift */; };
 		84672099241D1B8800F37BBE /* CoursesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84672098241D1B8800F37BBE /* CoursesList.swift */; };
 		84943CCE2418DC1E00831A41 /* HomeViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84943CCD2418DC1E00831A41 /* HomeViewContent.swift */; };
+		849FDF3D241F764E00A0EDE9 /* CourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FDF3C241F764E00A0EDE9 /* CourseDetails.swift */; };
+		849FDF3F241F8A5800A0EDE9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FDF3E241F8A5800A0EDE9 /* Data.swift */; };
+		849FDF41241FA25900A0EDE9 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FDF40241FA25800A0EDE9 /* PostList.swift */; };
+		849FDF43241FA76700A0EDE9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FDF42241FA76700A0EDE9 /* DataStore.swift */; };
 		84DAA0EB241A29E7000B1238 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA0EA241A29E7000B1238 /* UpdateStore.swift */; };
 		84DAA0ED241A46C7000B1238 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA0EC241A46C7000B1238 /* TabBar.swift */; };
 		ED2ECE1C24195DC5003F4A5D /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECE1B24195DC5003F4A5D /* Update.swift */; };
@@ -34,6 +38,10 @@
 		845A6613241A7D5F0038F7CE /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		84672098241D1B8800F37BBE /* CoursesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesList.swift; sourceTree = "<group>"; };
 		84943CCD2418DC1E00831A41 /* HomeViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewContent.swift; sourceTree = "<group>"; };
+		849FDF3C241F764E00A0EDE9 /* CourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetails.swift; sourceTree = "<group>"; };
+		849FDF3E241F8A5800A0EDE9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		849FDF40241FA25800A0EDE9 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		849FDF42241FA76700A0EDE9 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		84DAA0EA241A29E7000B1238 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		84DAA0EC241A46C7000B1238 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		ED2ECE1B24195DC5003F4A5D /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
@@ -103,6 +111,10 @@
 				84DAA0EA241A29E7000B1238 /* UpdateStore.swift */,
 				84DAA0EC241A46C7000B1238 /* TabBar.swift */,
 				84672098241D1B8800F37BBE /* CoursesList.swift */,
+				849FDF3C241F764E00A0EDE9 /* CourseDetails.swift */,
+				849FDF40241FA25800A0EDE9 /* PostList.swift */,
+				849FDF3E241F8A5800A0EDE9 /* Data.swift */,
+				849FDF42241FA76700A0EDE9 /* DataStore.swift */,
 				EDE846272406C05100A5B34D /* Assets.xcassets */,
 				EDE8462C2406C05100A5B34D /* LaunchScreen.storyboard */,
 				EDE8462F2406C05100A5B34D /* Info.plist */,
@@ -190,11 +202,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849FDF43241FA76700A0EDE9 /* DataStore.swift in Sources */,
 				EDE846222406C04E00A5B34D /* AppDelegate.swift in Sources */,
+				849FDF41241FA25900A0EDE9 /* PostList.swift in Sources */,
 				843B7DA0241927BD00711C41 /* UpdateListView.swift in Sources */,
 				845A6614241A7D5F0038F7CE /* Modifiers.swift in Sources */,
 				843B7D9E2418FF0C00711C41 /* Sction.swift in Sources */,
 				84DAA0ED241A46C7000B1238 /* TabBar.swift in Sources */,
+				849FDF3D241F764E00A0EDE9 /* CourseDetails.swift in Sources */,
 				ED2ECE1C24195DC5003F4A5D /* Update.swift in Sources */,
 				84943CCE2418DC1E00831A41 /* HomeViewContent.swift in Sources */,
 				84672099241D1B8800F37BBE /* CoursesList.swift in Sources */,
@@ -202,6 +217,7 @@
 				ED2ECE1E241967BA003F4A5D /* UpdateDetails.swift in Sources */,
 				84DAA0EB241A29E7000B1238 /* UpdateStore.swift in Sources */,
 				EDBAD3C924103D2F0039D81B /* MenuView.swift in Sources */,
+				849FDF3F241F8A5800A0EDE9 /* Data.swift in Sources */,
 				EDE846242406C04E00A5B34D /* SceneDelegate.swift in Sources */,
 				ED94423F24168D0000383632 /* HomeView.swift in Sources */,
 				EDE846262406C04E00A5B34D /* ContentView.swift in Sources */,
