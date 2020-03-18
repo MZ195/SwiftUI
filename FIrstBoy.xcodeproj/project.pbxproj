@@ -20,6 +20,8 @@
 		849FDF43241FA76700A0EDE9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FDF42241FA76700A0EDE9 /* DataStore.swift */; };
 		84DAA0EB241A29E7000B1238 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA0EA241A29E7000B1238 /* UpdateStore.swift */; };
 		84DAA0ED241A46C7000B1238 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA0EC241A46C7000B1238 /* TabBar.swift */; };
+		84FD970C24221F5E0095F842 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 84FD970B24221F5E0095F842 /* SDWebImageSwiftUI */; };
+		84FD970E242227740095F842 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD970D242227740095F842 /* BlurView.swift */; };
 		ED2ECE1C24195DC5003F4A5D /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECE1B24195DC5003F4A5D /* Update.swift */; };
 		ED2ECE1E241967BA003F4A5D /* UpdateDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECE1D241967BA003F4A5D /* UpdateDetails.swift */; };
 		ED94423F24168D0000383632 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94423E24168D0000383632 /* HomeView.swift */; };
@@ -47,6 +49,7 @@
 		849FDF42241FA76700A0EDE9 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		84DAA0EA241A29E7000B1238 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		84DAA0EC241A46C7000B1238 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		84FD970D242227740095F842 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		ED2ECE1B24195DC5003F4A5D /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		ED2ECE1D241967BA003F4A5D /* UpdateDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetails.swift; sourceTree = "<group>"; };
 		ED94423E24168D0000383632 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FD970C24221F5E0095F842 /* SDWebImageSwiftUI in Frameworks */,
 				EDB5DEF6241FF835008746F1 /* Contentful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +124,7 @@
 				849FDF40241FA25800A0EDE9 /* PostList.swift */,
 				849FDF3E241F8A5800A0EDE9 /* Data.swift */,
 				849FDF42241FA76700A0EDE9 /* DataStore.swift */,
+				84FD970D242227740095F842 /* BlurView.swift */,
 				EDE846272406C05100A5B34D /* Assets.xcassets */,
 				EDE8462C2406C05100A5B34D /* LaunchScreen.storyboard */,
 				EDE8462F2406C05100A5B34D /* Info.plist */,
@@ -154,6 +159,7 @@
 			name = FIrstBoy;
 			packageProductDependencies = (
 				EDB5DEF5241FF835008746F1 /* Contentful */,
+				84FD970B24221F5E0095F842 /* SDWebImageSwiftUI */,
 			);
 			productName = FIrstBoy;
 			productReference = EDE8461E2406C04E00A5B34D /* FIrstBoy.app */;
@@ -185,6 +191,7 @@
 			mainGroup = EDE846152406C04E00A5B34D;
 			packageReferences = (
 				EDB5DEF4241FF835008746F1 /* XCRemoteSwiftPackageReference "contentful.swift" */,
+				84FD970A24221F5E0095F842 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = EDE8461F2406C04E00A5B34D /* Products */;
 			projectDirPath = "";
@@ -221,6 +228,7 @@
 				843B7D9E2418FF0C00711C41 /* Sction.swift in Sources */,
 				84DAA0ED241A46C7000B1238 /* TabBar.swift in Sources */,
 				849FDF3D241F764E00A0EDE9 /* CourseDetails.swift in Sources */,
+				84FD970E242227740095F842 /* BlurView.swift in Sources */,
 				ED2ECE1C24195DC5003F4A5D /* Update.swift in Sources */,
 				84943CCE2418DC1E00831A41 /* HomeViewContent.swift in Sources */,
 				84672099241D1B8800F37BBE /* CoursesList.swift in Sources */,
@@ -428,6 +436,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		84FD970A24221F5E0095F842 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		EDB5DEF4241FF835008746F1 /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/contentful/contentful.swift.git";
@@ -439,6 +455,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		84FD970B24221F5E0095F842 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84FD970A24221F5E0095F842 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		EDB5DEF5241FF835008746F1 /* Contentful */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EDB5DEF4241FF835008746F1 /* XCRemoteSwiftPackageReference "contentful.swift" */;
