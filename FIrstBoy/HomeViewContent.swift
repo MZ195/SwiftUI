@@ -26,10 +26,10 @@ struct HomeViewContent: View {
                     
                     Button(action: { self.showUpdate.toggle() }) {
                         Image(systemName: "bell")
-                            .renderingMode(.original)
                             .font(.system(size: 16, weight: .medium))
                             .frame(width: 36, height: 36)
-                            .background(Color.white)
+                            .foregroundColor(.primary)
+                            .background(Color("background3"))
                             .clipShape(Circle())
                             .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
                         .   shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
@@ -143,7 +143,7 @@ struct WatchRingsView: View {
                 }
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
@@ -151,7 +151,7 @@ struct WatchRingsView: View {
                 RingView(showProgress: .constant(true), color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 55)
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
@@ -159,7 +159,7 @@ struct WatchRingsView: View {
                 RingView(showProgress: .constant(true), color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 32)
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
         }
