@@ -1,4 +1,4 @@
-//
+ //
 //  LoginView.swift
 //  FIrstBoy
 //
@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+ import Firebase
 
 struct LoginView: View {
     
@@ -16,6 +17,29 @@ struct LoginView: View {
     @State var showAlert = false
     @State var alertMessage = "Something went wrong"
     @State var isLoading = false
+    @State var isSuccess = false
+    
+    func login() {
+        self.isFocused = false
+        self.isLoading = true
+        self.hideKeyboard()
+        
+        Auth.auth().signIn(withEmail: self.email, password: self.password) { (result, error) in
+            self.isLoading = false
+            if error != nil {
+                self.alertMessage = error?.localizedDescription ?? ""
+                self.showAlert = true
+            } else {
+                self.isSuccess = true
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.isSuccess = false
+                    self.email = ""
+                    self.password = ""
+                }
+            }
+        }
+    }
     
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -69,7 +93,7 @@ struct LoginView: View {
                             .padding(.leading)
                         
                         
-                        TextField("password".uppercased(), text: $password)
+                        SecureField("password".uppercased(), text: $password)
                             .keyboardType(.default)
                             .font(.subheadline)
                             .padding(.leading)
@@ -93,12 +117,7 @@ struct LoginView: View {
                     
                     Spacer()
                     
-                    Button(action: {
-//                        self.showAlert = true
-                        self.isLoading = true
-                        self.isFocused = false
-                        self.hideKeyboard()
-                    }) {
+                    Button(action: {self.login()}) {
                         Text("Log in")
                             .foregroundColor(Color.black)
                     }
@@ -129,6 +148,9 @@ struct LoginView: View {
                 LoadingView()
             }
             
+            if isSuccess {
+                SuccessView()
+            }
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09551A4907996E979B9462EE /* Pods_FIrstBoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B573379CFF1420C9B5515D /* Pods_FIrstBoy.framework */; };
 		843B7D9E2418FF0C00711C41 /* Sction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B7D9D2418FF0C00711C41 /* Sction.swift */; };
 		843B7DA0241927BD00711C41 /* UpdateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B7D9F241927BD00711C41 /* UpdateListView.swift */; };
 		844BF2C82420DB8500F33BBF /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF2C72420DB8500F33BBF /* CourseStore.swift */; };
@@ -20,18 +21,20 @@
 		849FDF43241FA76700A0EDE9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FDF42241FA76700A0EDE9 /* DataStore.swift */; };
 		84DAA0EB241A29E7000B1238 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA0EA241A29E7000B1238 /* UpdateStore.swift */; };
 		84DAA0ED241A46C7000B1238 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA0EC241A46C7000B1238 /* TabBar.swift */; };
-		84FD970C24221F5E0095F842 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 84FD970B24221F5E0095F842 /* SDWebImageSwiftUI */; };
+		84FD970C24221F5E0095F842 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 84FD970B24221F5E0095F842 /* SwiftPackageProductDependency */; };
 		84FD970E242227740095F842 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD970D242227740095F842 /* BlurView.swift */; };
 		ED2ECE1C24195DC5003F4A5D /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECE1B24195DC5003F4A5D /* Update.swift */; };
 		ED2ECE1E241967BA003F4A5D /* UpdateDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECE1D241967BA003F4A5D /* UpdateDetails.swift */; };
+		ED5E3921243C7DFA00468E39 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E3920243C7DFA00468E39 /* SuccessView.swift */; };
+		ED5E3923243C8B8100468E39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED5E3922243C8B8100468E39 /* GoogleService-Info.plist */; };
 		ED94423F24168D0000383632 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94423E24168D0000383632 /* HomeView.swift */; };
 		ED95348324322CA700A17937 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95348224322CA700A17937 /* Buttons.swift */; };
 		ED9534852433943F00A17937 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9534842433943F00A17937 /* LoginView.swift */; };
-		EDB5DEF6241FF835008746F1 /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = EDB5DEF5241FF835008746F1 /* Contentful */; };
+		EDB5DEF6241FF835008746F1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = EDB5DEF5241FF835008746F1 /* SwiftPackageProductDependency */; };
 		EDBAD3C924103D2F0039D81B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD3C824103D2F0039D81B /* MenuView.swift */; };
 		EDBE0C46243B5D6B007C1728 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = EDBE0C44243B5D6B007C1728 /* loading.json */; };
 		EDBE0C47243B5D6B007C1728 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = EDBE0C45243B5D6B007C1728 /* success.json */; };
-		EDBE0C4A243B5DD1007C1728 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EDBE0C49243B5DD1007C1728 /* Lottie */; };
+		EDBE0C4A243B5DD1007C1728 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = EDBE0C49243B5DD1007C1728 /* SwiftPackageProductDependency */; };
 		EDBE0C4C243B5ED1007C1728 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE0C4B243B5ED1007C1728 /* LottieView.swift */; };
 		EDBE0C4E243B61C8007C1728 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE0C4D243B61C8007C1728 /* LoadingView.swift */; };
 		EDE846222406C04E00A5B34D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE846212406C04E00A5B34D /* AppDelegate.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		333BAC1A4D3B87D89121B6E9 /* Pods-FIrstBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIrstBoy.debug.xcconfig"; path = "Target Support Files/Pods-FIrstBoy/Pods-FIrstBoy.debug.xcconfig"; sourceTree = "<group>"; };
+		59B573379CFF1420C9B5515D /* Pods_FIrstBoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIrstBoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FF6F8FC60DB0D77F7989E79 /* Pods-FIrstBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIrstBoy.release.xcconfig"; path = "Target Support Files/Pods-FIrstBoy/Pods-FIrstBoy.release.xcconfig"; sourceTree = "<group>"; };
 		843B7D9D2418FF0C00711C41 /* Sction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sction.swift; sourceTree = "<group>"; };
 		843B7D9F241927BD00711C41 /* UpdateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateListView.swift; sourceTree = "<group>"; };
 		844BF2C72420DB8500F33BBF /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
@@ -59,6 +65,8 @@
 		84FD970D242227740095F842 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		ED2ECE1B24195DC5003F4A5D /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		ED2ECE1D241967BA003F4A5D /* UpdateDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetails.swift; sourceTree = "<group>"; };
+		ED5E3920243C7DFA00468E39 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		ED5E3922243C8B8100468E39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED94423E24168D0000383632 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		ED95348224322CA700A17937 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		ED9534842433943F00A17937 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -82,15 +90,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84FD970C24221F5E0095F842 /* SDWebImageSwiftUI in Frameworks */,
-				EDB5DEF6241FF835008746F1 /* Contentful in Frameworks */,
-				EDBE0C4A243B5DD1007C1728 /* Lottie in Frameworks */,
+				84FD970C24221F5E0095F842 /* BuildFile in Frameworks */,
+				EDB5DEF6241FF835008746F1 /* BuildFile in Frameworks */,
+				EDBE0C4A243B5DD1007C1728 /* BuildFile in Frameworks */,
+				09551A4907996E979B9462EE /* Pods_FIrstBoy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5064A9D6265F875B49DD76B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				333BAC1A4D3B87D89121B6E9 /* Pods-FIrstBoy.debug.xcconfig */,
+				7FF6F8FC60DB0D77F7989E79 /* Pods-FIrstBoy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		843B7D9C2418FEF300711C41 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +133,8 @@
 			children = (
 				EDE846202406C04E00A5B34D /* FIrstBoy */,
 				EDE8461F2406C04E00A5B34D /* Products */,
+				5064A9D6265F875B49DD76B8 /* Pods */,
+				EF2D8BDDFD2C55C980310D5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,9 +171,11 @@
 				84FD970D242227740095F842 /* BlurView.swift */,
 				EDBE0C4B243B5ED1007C1728 /* LottieView.swift */,
 				EDBE0C4D243B61C8007C1728 /* LoadingView.swift */,
+				ED5E3920243C7DFA00468E39 /* SuccessView.swift */,
 				ED95348224322CA700A17937 /* Buttons.swift */,
 				ED9534842433943F00A17937 /* LoginView.swift */,
 				EDE846272406C05100A5B34D /* Assets.xcassets */,
+				ED5E3922243C8B8100468E39 /* GoogleService-Info.plist */,
 				EDE8462C2406C05100A5B34D /* LaunchScreen.storyboard */,
 				EDE8462F2406C05100A5B34D /* Info.plist */,
 				EDBE0C43243B5D6B007C1728 /* Lottie */,
@@ -169,6 +192,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EF2D8BDDFD2C55C980310D5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59B573379CFF1420C9B5515D /* Pods_FIrstBoy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDE846322406C05200A5B34D /* Build configuration list for PBXNativeTarget "FIrstBoy" */;
 			buildPhases = (
+				F66ADCBB827205407E3DFFD7 /* [CP] Check Pods Manifest.lock */,
 				EDE8461A2406C04E00A5B34D /* Sources */,
 				EDE8461B2406C04E00A5B34D /* Frameworks */,
 				EDE8461C2406C04E00A5B34D /* Resources */,
+				365604A59273A9EB389077EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,9 +219,9 @@
 			);
 			name = FIrstBoy;
 			packageProductDependencies = (
-				EDB5DEF5241FF835008746F1 /* Contentful */,
-				84FD970B24221F5E0095F842 /* SDWebImageSwiftUI */,
-				EDBE0C49243B5DD1007C1728 /* Lottie */,
+				EDB5DEF5241FF835008746F1 /* SwiftPackageProductDependency */,
+				84FD970B24221F5E0095F842 /* SwiftPackageProductDependency */,
+				EDBE0C49243B5DD1007C1728 /* SwiftPackageProductDependency */,
 			);
 			productName = FIrstBoy;
 			productReference = EDE8461E2406C04E00A5B34D /* FIrstBoy.app */;
@@ -219,9 +252,9 @@
 			);
 			mainGroup = EDE846152406C04E00A5B34D;
 			packageReferences = (
-				EDB5DEF4241FF835008746F1 /* XCRemoteSwiftPackageReference "contentful.swift" */,
-				84FD970A24221F5E0095F842 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				EDBE0C48243B5DD1007C1728 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				EDB5DEF4241FF835008746F1 /* RemoteSwiftPackageReference */,
+				84FD970A24221F5E0095F842 /* RemoteSwiftPackageReference */,
+				EDBE0C48243B5DD1007C1728 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = EDE8461F2406C04E00A5B34D /* Products */;
 			projectDirPath = "";
@@ -242,10 +275,53 @@
 				EDE8462B2406C05100A5B34D /* Preview Assets.xcassets in Resources */,
 				EDBE0C46243B5D6B007C1728 /* loading.json in Resources */,
 				EDE846282406C05100A5B34D /* Assets.xcassets in Resources */,
+				ED5E3923243C8B8100468E39 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		365604A59273A9EB389077EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FIrstBoy/Pods-FIrstBoy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FIrstBoy/Pods-FIrstBoy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FIrstBoy/Pods-FIrstBoy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F66ADCBB827205407E3DFFD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FIrstBoy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDE8461A2406C04E00A5B34D /* Sources */ = {
@@ -256,6 +332,7 @@
 				EDE846222406C04E00A5B34D /* AppDelegate.swift in Sources */,
 				849FDF41241FA25900A0EDE9 /* PostList.swift in Sources */,
 				ED95348324322CA700A17937 /* Buttons.swift in Sources */,
+				ED5E3921243C7DFA00468E39 /* SuccessView.swift in Sources */,
 				ED9534852433943F00A17937 /* LoginView.swift in Sources */,
 				843B7DA0241927BD00711C41 /* UpdateListView.swift in Sources */,
 				845A6614241A7D5F0038F7CE /* Modifiers.swift in Sources */,
@@ -410,6 +487,7 @@
 		};
 		EDE846332406C05200A5B34D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 333BAC1A4D3B87D89121B6E9 /* Pods-FIrstBoy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +508,7 @@
 		};
 		EDE846342406C05200A5B34D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF6F8FC60DB0D77F7989E79 /* Pods-FIrstBoy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,7 +551,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		84FD970A24221F5E0095F842 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		84FD970A24221F5E0095F842 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
@@ -480,7 +559,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		EDB5DEF4241FF835008746F1 /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
+		EDB5DEF4241FF835008746F1 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/contentful/contentful.swift.git";
 			requirement = {
@@ -488,7 +567,7 @@
 				minimumVersion = 5.0.8;
 			};
 		};
-		EDBE0C48243B5DD1007C1728 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		EDBE0C48243B5DD1007C1728 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -499,19 +578,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		84FD970B24221F5E0095F842 /* SDWebImageSwiftUI */ = {
+		84FD970B24221F5E0095F842 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84FD970A24221F5E0095F842 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = 84FD970A24221F5E0095F842 /* RemoteSwiftPackageReference */;
 			productName = SDWebImageSwiftUI;
 		};
-		EDB5DEF5241FF835008746F1 /* Contentful */ = {
+		EDB5DEF5241FF835008746F1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EDB5DEF4241FF835008746F1 /* XCRemoteSwiftPackageReference "contentful.swift" */;
+			package = EDB5DEF4241FF835008746F1 /* RemoteSwiftPackageReference */;
 			productName = Contentful;
 		};
-		EDBE0C49243B5DD1007C1728 /* Lottie */ = {
+		EDBE0C49243B5DD1007C1728 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EDBE0C48243B5DD1007C1728 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = EDBE0C48243B5DD1007C1728 /* RemoteSwiftPackageReference */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */

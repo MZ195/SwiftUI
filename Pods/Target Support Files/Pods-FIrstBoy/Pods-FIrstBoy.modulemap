@@ -1,0 +1,6 @@
+framework module Pods_FIrstBoy {
+  umbrella header "Pods-FIrstBoy-umbrella.h"
+
+  export *
+  module * { export * }
+}
