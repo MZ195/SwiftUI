@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-SwiftUI was introduced with iOS 13. 
+SwiftUI was introduced with iOS 13.
 
 instead of imperative UI, prior to iOS 13, SwiftUI is a user interface toolkit that lets us design apps in a declarative way.
 
@@ -13,12 +13,14 @@ Most techniques were learned from a course at https://designcode.io/
 
 ## PROJECT SCREENSHOTS
 
-![Certificates!](Images/Certificates.png)
+![Certificates!](Screenshots/Certificates.png)
 
-![Certificates View!](Images/Certificates_View.png)
+![Certificates View!](Screenshots/Certificates_View.png)
 
-![Home!](Images/Home.png)
+![Home!](Screenshots/Home.png)
 
-![Section!](Images/Section.png)
+![Course!](Screenshots/Course.png)
 
-![Updates!](Images/Updates.png)
+![Section!](Screenshots/Section.png)
+
+![Updates!](Screenshots/Updates.png)
