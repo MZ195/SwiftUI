@@ -13,14 +13,4 @@ Most techniques were learned from a course at [Design+Code](https://designcode.i
 
 ## PROJECT SCREENSHOTS
 
-![Certificates!](Screenshots/Certificates.png)
-
-![Certificates View!](Screenshots/Certificates_View.png)
-
-![Home!](Screenshots/Home.png)
-
-![Course!](Screenshots/Course.png)
-
-![Section!](Screenshots/Section.png)
-
-![Updates!](Screenshots/Updates.png)
+![Certificates!](Screenshots/Certificates.png) ![Certificates View!](Screenshots/Certificates_View.png) ![Home!](Screenshots/Home.png) ![Course!](Screenshots/Course.png) ![Section!](Screenshots/Section.png) ![Updates!](Screenshots/Updates.png)
