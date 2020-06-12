@@ -8,7 +8,7 @@ instead of imperative UI, prior to iOS 13, SwiftUI is a user interface toolkit t
 
 This iOS project is all about using SwiftUI and learning new design trends.
 
-Most techniques were learned from a course at https://designcode.io/
+Most techniques were learned from a course at [Design+Code](https://designcode.io/)
 
 
 ## PROJECT SCREENSHOTS
